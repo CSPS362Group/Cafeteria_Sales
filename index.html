@@ -6,8 +6,35 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href ="style.css" rel ="stylesheet"> <!-- connects to style.css -->
     <script src ="script.js" defer> </script> <!-- connects to script.js  -->
+    <!-- still need to decode JWST, connect to database, and sign out-->
+    <script src="https://accounts.google.com/gsi/client" async></script>
+
+        <script>
+        function handleCredentialResponse(response){
+            window.alert("hello");
+        }
+    </script>
+    
 </head>
 <body>
-NEW UPDATE
+<div id="g_id_onload"
+     data-client_id="634346637512-dpli4vcrhpjmgie5nho716s9vpq14b61.apps.googleusercontent.com"
+     data-context="signin"
+     data-ux_mode="popup"
+    data-callback="handleCredentialResponse"
+     data-auto_prompt="false">
+</div>
+
+<div class="g_id_signin"
+     data-type="standard"
+     data-shape="rectangular"
+     data-theme="outline"
+     data-text="signin_with"
+     data-size="large"
+     data-logo_alignment="left">
+</div>
+    
+<div class="g_id_signout">Sign Out</div>
+
 </body>
 </html>
